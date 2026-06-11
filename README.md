@@ -1,49 +1,62 @@
-# PA3 - Dashboard SCOPUS y Streamlit
+# PA3 - Dashboard Bibliométrico Scopus en Streamlit
+
+Este proyecto implementa un dashboard en Streamlit usando un archivo CSV exportado desde Scopus.
 
 ## Pregunta de investigación
 
-¿Cómo se está utilizando Machine Learning para predecir el rendimiento académico de estudiantes en educación superior entre 2020 y 2026?
+¿Cómo se aplican las técnicas de clustering y optimización en Big Data Mining para mejorar la segmentación de clientes, la detección de riesgo y el análisis empresarial?
 
 ## Keywords
 
-1. machine learning
-2. academic performance
-3. student prediction
-4. higher education
+1. big data clustering
+2. K-means
+3. data mining
+4. customer segmentation
 
 ## Query sugerida para Scopus
 
 ```text
-TITLE-ABS-KEY("machine learning" AND "academic performance" AND "student prediction" AND "higher education") AND PUBYEAR > 2019
+TITLE-ABS-KEY(("big data clustering" OR "K-means") AND "data mining" AND ("customer segmentation" OR "loan risk" OR business))
 ```
-
-## Estructura del proyecto
-
-```text
-pa3_streamlit_scopus_ml/
-│── app.py
-│── sample_scopus_ml.csv
-│── requirements.txt
-│── README.md
-│── LICENSE
-```
-
-## Ejecución local
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-## Despliegue en Streamlit Cloud
-
-1. Crear un repositorio público en GitHub.
-2. Subir los archivos del proyecto.
-3. Ingresar a Streamlit Cloud.
-4. Seleccionar el repositorio.
-5. Indicar como archivo principal: `app.py`.
-6. Deploy.
 
 ## Dataset
 
-El archivo `sample_scopus_ml.csv` solo sirve para probar la aplicación. Para la entrega final, reemplazarlo por el CSV exportado desde Scopus con al menos 10 artículos científicos.
+El repositorio incluye el archivo:
+
+```text
+scopus_articles.csv
+```
+
+Este archivo contiene 13 artículos exportados desde Scopus con metadatos como autores, título, año, fuente, citas, DOI, abstract y keywords.
+
+## Ejecutar localmente
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+## Publicar en Streamlit Cloud
+
+1. Subir este proyecto a GitHub.
+2. Entrar a Streamlit Cloud.
+3. Crear una nueva app.
+4. Seleccionar el repositorio.
+5. Colocar `app.py` como archivo principal.
+6. Deploy.
+
+## Archivos principales
+
+```text
+app.py
+requirements.txt
+scopus_articles.csv
+README.md
+LICENSE
+```
+
+## Licencia
+
+Apache License 2.0.
